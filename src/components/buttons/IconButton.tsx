@@ -1,3 +1,5 @@
+/* eslint-disable unused-imports/no-unused-vars */
+
 import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
 import { IconType } from 'react-icons';
@@ -35,7 +37,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
       classNames,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const disabled = isLoading || buttonDisabled;
 
@@ -45,9 +47,9 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         type='button'
         disabled={disabled}
         className={cn(
-          'inline-flex items-center justify-center rounded font-medium',
-          'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
-          'shadow-sm',
+          'inline-flex items-center justify-center rounded-sm font-medium',
+          'focus-visible:ring-primary-500 focus:outline-hidden focus-visible:ring-3',
+          'shadow-xs',
           'transition-colors duration-75',
           'min-h-[28px] min-w-[28px] p-1 md:min-h-[34px] md:min-w-[34px] md:p-2',
           //#region  //*=========== Variants ===========
@@ -89,7 +91,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
           'disabled:cursor-not-allowed',
           isLoading &&
             'relative text-transparent transition-none hover:text-transparent disabled:cursor-wait',
-          className
+          className,
         )}
         {...rest}
       >
@@ -101,7 +103,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
                 'text-white': ['primary', 'dark'].includes(variant),
                 'text-black': ['light'].includes(variant),
                 'text-primary-500': ['outline', 'ghost'].includes(variant),
-              }
+              },
             )}
           >
             <ImSpinner2 className='animate-spin' />
@@ -110,7 +112,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         {Icon && <Icon size='1em' className={cn(classNames?.icon)} />}
       </button>
     );
-  }
+  },
 );
 
 export default IconButton;

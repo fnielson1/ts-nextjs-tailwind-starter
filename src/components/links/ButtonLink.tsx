@@ -1,3 +1,5 @@
+/* eslint-disable unused-imports/no-unused-vars */
+
 import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
 import { IconType } from 'react-icons';
@@ -42,16 +44,16 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       classNames,
       ...rest
     },
-    ref
+    ref,
   ) => {
     return (
       <UnstyledLink
         ref={ref}
         {...rest}
         className={cn(
-          'inline-flex items-center rounded font-medium',
-          'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
-          'shadow-sm',
+          'inline-flex items-center rounded-sm font-medium',
+          'focus-visible:ring-primary-500 focus:outline-hidden focus-visible:ring-3',
+          'shadow-xs',
           'transition-colors duration-75',
           //#region  //*=========== Size ===========
           [
@@ -96,7 +98,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           ],
           //#endregion  //*======== Variants ===========
           'disabled:cursor-not-allowed',
-          className
+          className,
         )}
       >
         {LeftIcon && (
@@ -113,7 +115,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
                   size === 'base' && 'md:text-md text-md',
                   size === 'sm' && 'md:text-md text-sm',
                 ],
-                classNames?.leftIcon
+                classNames?.leftIcon,
               )}
             />
           </div>
@@ -133,14 +135,14 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
                   size === 'base' && 'text-md md:text-md',
                   size === 'sm' && 'md:text-md text-sm',
                 ],
-                classNames?.rightIcon
+                classNames?.rightIcon,
               )}
             />
           </div>
         )}
       </UnstyledLink>
     );
-  }
+  },
 );
 
 export default ButtonLink;

@@ -1,3 +1,5 @@
+/* eslint-disable unused-imports/no-unused-vars */
+
 import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
 import { IconType } from 'react-icons';
@@ -35,16 +37,16 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
       classNames,
       ...rest
     },
-    ref
+    ref,
   ) => {
     return (
       <UnstyledLink
         ref={ref}
         type='button'
         className={cn(
-          'inline-flex items-center justify-center rounded font-medium',
-          'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
-          'shadow-sm',
+          'inline-flex items-center justify-center rounded-sm font-medium',
+          'focus-visible:ring-primary-500 focus:outline-hidden focus-visible:ring-3',
+          'shadow-xs',
           'transition-colors duration-75',
           'min-h-[28px] min-w-[28px] p-1 md:min-h-[34px] md:min-w-[34px] md:p-2',
           //#region  //*=========== Variants ===========
@@ -84,14 +86,14 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
           ],
           //#endregion  //*======== Variants ===========
           'disabled:cursor-not-allowed',
-          className
+          className,
         )}
         {...rest}
       >
         {Icon && <Icon size='1em' className={cn(classNames?.icon)} />}
       </UnstyledLink>
     );
-  }
+  },
 );
 
 export default IconLink;
