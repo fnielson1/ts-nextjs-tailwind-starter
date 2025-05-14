@@ -1,5 +1,3 @@
-/* eslint-disable unused-imports/no-unused-vars */
-
 import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
 import { IconType } from 'react-icons';
@@ -7,6 +5,7 @@ import { ImSpinner2 } from 'react-icons/im';
 
 import { cn } from '@/lib/utils';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const IconButtonVariant = [
   'primary',
   'outline',

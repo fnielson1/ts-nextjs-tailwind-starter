@@ -1,4 +1,4 @@
-/* eslint-disable unused-imports/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
