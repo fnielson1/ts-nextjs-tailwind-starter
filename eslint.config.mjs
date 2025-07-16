@@ -98,6 +98,7 @@ export default [
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
 
+      'unicorn/no-negated-condition': 'error',
       'unicorn/switch-case-braces': ['error', 'always'],
     },
   },
